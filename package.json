@@ -1,0 +1,24 @@
+{
+  "name": "clear-execution-framework",
+  "version": "1.0.0",
+  "description": "The CLEAR™ Execution Framework is a practical leadership and execution methodology designed to help\r volunteer-driven and mission-based organizations turn good intentions into consistent results.",
+  "main": "index.js",
+  "scripts": {
+  "pdf": "node scripts/export-pdf.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leosmith1244/clear-execution-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Leosmith1244/clear-execution-framework/issues"
+  },
+  "homepage": "https://github.com/Leosmith1244/clear-execution-framework#readme",
+  "devDependencies": {
+    "playwright": "^1.58.1"
+  }
+}

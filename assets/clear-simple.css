@@ -1,0 +1,110 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography & Base */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  color: #1f2933;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.byline {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  margin-bottom: 0.75rem;
+}
+
+.emphasis {
+  font-style: italic;
+  color: #374151;
+}
+
+/* Framework */
+.framework-image {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1.5rem 0;
+}
+
+.framework-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.framework-list li {
+  margin-bottom: 0.75rem;
+}
+
+.framework-list strong {
+  font-weight: 600;
+}
+
+/* Use cases */
+.use-cases {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.use-cases li {
+  margin-bottom: 0.5rem;
+}
+
+/* About */
+.about p {
+  max-width: 700px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.footer-note {
+  margin-top: 0.25rem;
+}

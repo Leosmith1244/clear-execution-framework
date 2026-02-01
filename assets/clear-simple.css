@@ -120,10 +120,10 @@ body {
   border-bottom-color: #1f2933;
 }
 /* =========================
-   Print Styles (LETTER PDF)
+   Print Styles (PDF Export)
    ========================= */
 @media print {
-
+  /* Page setup */
   @page {
     size: letter;
     margin: 0.6in;
@@ -132,91 +132,83 @@ body {
   body {
     background: #ffffff;
     color: #000000;
-    line-height: 1.32;
+    line-height: 1.35;
   }
 
+  /* Tighten layout for one-page print */
   .container {
     max-width: none;
     padding: 0;
   }
 
-  /* HERO */
   .hero {
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero h1 {
-    font-size: 2.05rem;
-    margin-bottom: 0.35rem;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
   }
 
   .subtitle {
     font-size: 1.05rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
   }
 
   .byline {
     font-size: 0.9rem;
   }
 
-  /* SECTIONS */
   .section {
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.25rem;
   }
 
   .section h2 {
     font-size: 1.15rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.4rem;
   }
 
   .section p {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.45rem;
   }
 
-  .emphasis {
-    font-style: italic;
+  /* Keep framework items together if possible */
+  .framework-list li,
+  .use-cases li {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  /* FRAMEWORK */
+  /* Image handling */
   .framework-image {
     max-width: 100%;
-    margin: 0.65rem 0;
+    margin: 0.75rem 0;
     page-break-inside: avoid;
   }
 
-  .framework-list li {
-    margin-bottom: 0.4rem;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* USE CASES */
-  .use-cases li {
-    margin-bottom: 0.35rem;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* FOOTER */
+  /* Footer: keep it compact */
   .footer {
     border-top: 1px solid #d1d5db;
-    padding-top: 0.65rem;
+    padding-top: 0.75rem;
     font-size: 0.85rem;
     color: #111827;
   }
 
-  /* LINKS */
+  /* Links print cleanly */
   a {
     color: #000000;
     text-decoration: none;
   }
 
-  .pdf-link {
-    border-bottom: none;
+  /* Optional: show URLs after links in print */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #374151;
   }
 
-  /* Do NOT print hover effects */
-  a:hover {
-    text-decoration: none;
+  /* Don’t print hover styling effects */
+  .pdf-link {
+    border-bottom: none;
   }
 }

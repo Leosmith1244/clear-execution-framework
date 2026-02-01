@@ -181,9 +181,15 @@ body {
 
   /* Image handling */
   .framework-image {
-    max-width: 100%;
-    margin: 0.75rem 0;
+    width: 100%;
+    max-width: 5.4in;      /* wheel size control (try 5.2–5.6in) */
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;   /* centers it */
     page-break-inside: avoid;
+  }
+   .pdf-only-hide {
+    display: none !important;
   }
 
   /* Footer: keep it compact */

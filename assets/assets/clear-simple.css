@@ -1,0 +1,214 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography & Base */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  color: #1f2933;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.byline {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  margin-bottom: 0.75rem;
+}
+
+.emphasis {
+  font-style: italic;
+  color: #374151;
+}
+
+/* Framework */
+.framework-image {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1.5rem 0;
+}
+
+.framework-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.framework-list li {
+  margin-bottom: 0.75rem;
+}
+
+.framework-list strong {
+  font-weight: 600;
+}
+
+/* Use cases */
+.use-cases {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.use-cases li {
+  margin-bottom: 0.5rem;
+}
+
+/* About */
+.about p {
+  max-width: 700px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.footer-note {
+  margin-top: 0.25rem;
+}
+/* PDF Link */
+.pdf-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f2933;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.pdf-link:hover {
+  border-bottom-color: #1f2933;
+}
+/* =========================
+   Print Styles (PDF Export)
+   ========================= */
+@media print {
+  /* Page setup */
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.35;
+  }
+
+  /* Tighten layout for one-page print */
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .hero {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .byline {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    margin-bottom: 1.25rem;
+  }
+
+  .section h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .section p {
+    margin-bottom: 0.45rem;
+  }
+
+  /* Keep framework items together if possible */
+  .framework-list li,
+  .use-cases li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Image handling */
+  .framework-image {
+    max-width: 100%;
+    margin: 0.75rem 0;
+    page-break-inside: avoid;
+  }
+
+  /* Footer: keep it compact */
+  .footer {
+    border-top: 1px solid #d1d5db;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #111827;
+  }
+
+  /* Links print cleanly */
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  /* Optional: show URLs after links in print */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #374151;
+  }
+
+  /* Don’t print hover styling effects */
+  .pdf-link {
+    border-bottom: none;
+  }
+}

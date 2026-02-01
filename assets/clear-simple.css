@@ -108,3 +108,115 @@ body {
 .footer-note {
   margin-top: 0.25rem;
 }
+/* PDF Link */
+.pdf-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f2933;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.pdf-link:hover {
+  border-bottom-color: #1f2933;
+}
+/* =========================
+   Print Styles (LETTER PDF)
+   ========================= */
+@media print {
+
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.32;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .byline {
+    font-size: 0.9rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 1.15rem;
+  }
+
+  .section h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .section p {
+    margin-bottom: 0.4rem;
+  }
+
+  .emphasis {
+    font-style: italic;
+  }
+
+  /* FRAMEWORK */
+  .framework-image {
+    max-width: 100%;
+    margin: 0.65rem 0;
+    page-break-inside: avoid;
+  }
+
+  .framework-list li {
+    margin-bottom: 0.4rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* USE CASES */
+  .use-cases li {
+    margin-bottom: 0.35rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid #d1d5db;
+    padding-top: 0.65rem;
+    font-size: 0.85rem;
+    color: #111827;
+  }
+
+  /* LINKS */
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .pdf-link {
+    border-bottom: none;
+  }
+
+  /* Do NOT print hover effects */
+  a:hover {
+    text-decoration: none;
+  }
+}

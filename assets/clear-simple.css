@@ -19,46 +19,42 @@ body {
   padding: 3rem 1.5rem;
 }
 
-/* Hero */
+/* =====================
+   Hero (Brand Anchor)
+   ===================== */
 .hero {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
+  color: #111827;
 }
-
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 0.75rem;
+  background: #111827;
+}
 .subtitle {
-  font-size: 1.25rem;
-  color: #4b5563;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #374151;
   margin-bottom: 0.5rem;
 }
 
 .byline {
   font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: #6b7280;
-}
-
-/* Sections */
-.section {
-  margin-bottom: 3rem;
-}
-
-.section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.section p {
-  margin-bottom: 0.75rem;
-}
-
-.emphasis {
-  font-style: italic;
-  color: #374151;
 }
 
 /* Framework */
@@ -163,10 +159,13 @@ body {
     margin-bottom: 1.25rem;
   }
 
-  .section h2 {
-    font-size: 1.15rem;
-    margin-bottom: 0.4rem;
-  }
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
 
   .section p {
     margin-bottom: 0.45rem;
@@ -193,12 +192,18 @@ body {
   }
 
   /* Footer: keep it compact */
-  .footer {
-    border-top: 1px solid #d1d5db;
-    padding-top: 0.75rem;
-    font-size: 0.85rem;
-    color: #111827;
-  }
+ .footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.footer-note {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #111827;
+}
 
   /* Links print cleanly */
   a {
